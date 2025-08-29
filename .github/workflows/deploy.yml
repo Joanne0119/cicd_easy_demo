@@ -1,0 +1,22 @@
+name: Deploy static site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main   # 當 main 分支有更新時執行
+
+permissions:
+  contents: write   # 允許 Github Actions push 到 gh-pages 分支
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
