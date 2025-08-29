@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World</title>
+    <style>
+        #hello-text {
+            color: blue; 
+            cursor: pointer; 
+            font-size: 24px;
+            text-align: center;
+            margin-top: 50px; 
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="hello-text">Hello, World!</h1>
+
+    <script>
+        const helloElement = document.getElementById('hello-text');
+
+        helloElement.addEventListener('click', function() {
+            alert('Hello, JavaScript!');
+        });
+    </script>
+
+</body>
+</html>
